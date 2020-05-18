@@ -1,0 +1,59 @@
+README: FinChat: Finnish Chat Conversations
+date: 25.3.2020
+
+1. CORPUS DESCRIPTION
+Corpus contains 86 Finnish chat dialogs which have been collected during 2019-2020. 
+62 Participants were university staff, university students and high schoolers. For more detailed information, see the article listed below.
+Link: https://github.com/aalto-speech/FinChat
+
+Please cite following paper when using the corpus:
+tba
+
+Contact information:
+Aalto university
+Prof. Mikko Kurimo
+mikko.kurimo a aalto.fi
+PL12200
+00076 Aalto
+
+
+TEST SETTING
+Participants were given topic on which to have conversation with other participant in the private chat room. Participants did not know who they were speaking with. After each chat session which lasted 10-15 minutes, each participant filled an evaluation form (questionnaire) on the quality of the conversation. Participants had 1-3 conversations.
+
+Before the session, participants were asked not to share personal informations or copyrighted material. The parts of the conversations which did not respect the instructions were removed. This problem occurred mainly with high schoolers.
+
+Some conversations are missing evaluation from metadata or some of the answers are missing or have been answered multiple times.
+
+2. FILES
+    - finchat_chat_conversations.csv : chat dialogs
+        * CHAT_ID : Chat id. Each chat has a unique id.
+        * SPEAKER_ID : Speaker id. Each speaker has a unique id.
+        * TIME : time-stamp when the message was sent.
+        * TEXT : the message
+    - finchat_meta_data.csv : Information on each chat
+        * CHAT_ID : Chat id. Each chat has a unique id.
+        * SPEAKER_ID : Speaker id. Each speaker has a unique id.
+        * GROUP : Participant's background: University staff = 1, university student = 2, high schooler = 3
+        * TOPIC : Topic of the conversation given to participants before the chat session.
+        * OFFTOPIC : Other topics they conversed. 0 means no off-topic.
+
+        Answers of the questionnaire users answered after the conversation. 
+        For following questions Q1-Q5, value 0 means that the question was not answered.
+        * Q1 : Keskustelu oli kiinnostava. Kyllä (1) Ei (2)
+               Conversation was interesting. Yes (1) No (2)
+        * Q2 : Keskustelukumppanini kuunteli minua. Kyllä (1) Ei (2)
+               My partner was listening to me. Yes (1) No (2)
+        * Q3 : Pysyimme aiheessa. Kyllä (1) Ei (2)
+               We stayed on the topic. Yes (1) No (2)
+        * Q4 : Kumpi kysyi enemmän kysymyksiä? Minä kysyin useammin (1) Keskustelukumppanini kysyi useammin (2) Molemmat kysyivät yhtä paljon (3)
+               Which one of you asked more questions? Me (1) Partner (2) Both (3)
+        * Q5 : Kumpi johti keskustelua? Minä (1) Keskustelukumppani (2) Ei selkeää johtajaa (3)
+               Which one of you was leading the conversation? Me (1) Partner (2) Both (3)
+    - Chat_questionnaire.pdf : Questionnaire participants filled on survey.aalto.fi.
+
+3. FILE FORMATS
+The corpus is on the CSV files. Corpus is also available at Kielipankki on VRT format with additional labels they have generated. 
+
+4. LICENSE
+CC-BY-NC
+
