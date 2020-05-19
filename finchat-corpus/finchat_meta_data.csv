@@ -108,7 +108,7 @@ CHAT_ID,SPEAKER_ID,GROUP,TOPIC,OFFTOPIC,Q1,Q2,Q3,Q4,Q5
 65,58,3,sports,0,1,1,1,1,1
 72,55,3,sports,0,1,1,2,1,1
 65,50,3,sports,0,1,2,1,3,2
-78,65,3,sports,0,1,1,1,3,3
+70,57,3,sports,0,1,1,1,3,3
 64,63,3,sports,school,1,1,2,1,3
 72,64,3,sports,0,1,1,2,3,3
 66,69,3,sports,0,1,1,1,3,3
