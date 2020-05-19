@@ -1,0 +1,74 @@
+QA-pairs
+model dataset model id
+
+
+A encoder-decoder opensubs ID 52274668
+-------------------------------------
+4 --- formulamenestys ei ollut kaksista tänä vuonna --- mitä seuraavaksi tekisit ?
+25 --- Oletko kuunnellut tänään jotain musiikkia? --- mutta hän on kuin harvey .
+72 --- Olisin kuunnellu työmatkalla jos kuulokkeet ei olis hajonnu --- voisin järjestää sen
+100 --- Terve! <MS> Onko nälkä? --- se on jo ohi .
+133 --- Ruuanlaitossa on aika paljon kyse rutiineista --- tuo on paljon kuin lihaa .
+141 --- Onko tullut matkusteltua? --- mitä siitä on tapahtunut ?
+229 --- kyllä <MS> mut kui sä et harrasta liikuntaa --- hyppää ulos
+264 --- mites menee --- noin on jo aikaa .
+266 --- lueks kirjoi vapaa-ajal --- hän on jo lähtenyt .
+290 --- minkälaisii elokuvii katot? --- hän on jo parantunut .
+
+
+B encoder-decoder suomi24 ID 52273944
+-----------------------------------------------
+4 --- formulamenestys ei ollut kaksista tänä vuonna --- samoin kun on antanut sen muutuksen seurustella .
+25 --- Oletko kuunnellut tänään jotain musiikkia? --- onko kellään tietoa ?
+72 --- Olisin kuunnellu työmatkalla jos kuulokkeet ei olis hajonnu --- se on noin kaksikymmentä vuotta .
+100 --- Terve! <MS> Onko nälkä? --- onko kellään kokemusta ?
+133 --- Ruuanlaitossa on aika paljon kyse rutiineista --- jos et mene .
+141 --- Onko tullut matkusteltua? --- olen ollut tyytyväinen .
+229 --- kyllä <MS> mut kui sä et harrasta liikuntaa --- et saa sakkoa .
+264 --- mites menee --- no jos muuten oikein muuten oikein sattuu
+266 --- lueks kirjoi vapaa-ajal --- oot myös ns .
+290 --- minkälaisii elokuvii katot? --- se on paras .
+
+
+
+C transformer opensubs ID 52359009
+---------------------------------------------------------------
+4 --- formulamenestys ei ollut kaksista tänä vuonna --- pianoa aiemmin . tarvitsen häntä .
+25 --- Oletko kuunnellut tänään jotain musiikkia? --- sataviisikymmentä . olen erittäin hyvä .
+72 --- Olisin kuunnellu työmatkalla jos kuulokkeet ei olis hajonnu --- essa tai sitten hän ei tiedä . tos ovatlämies nostaa koiraymmärsi se .
+100 --- Terve! <MS> Onko nälkä? --- luunassa ? näyttää sinulle mutta sinun pitää tietää onko hän jotain koska olinkaan rajalla .
+133 --- Ruuanlaitossa on aika paljon kyse rutiineista --- ista ja vihollisyydestä . hän tekee sinut hulluksi hiukan .
+141 --- Onko tullut matkusteltua? --- yyteen ? meillä ei ole oppiajenöljyn hevosen ja kuukahtamiseen .
+229 --- kyllä <MS> mut kui sä et harrasta liikuntaa --- mpi . olen satu .
+264 --- mites menee --- rehtorin luokse . mitäköhän se minusta oli valphonissa ?
+266 --- lueks kirjoi vapaa-ajal --- imalla häntä kun he kattoon alkoivat pysäyttää heidät . annoin sinulle potkut .
+290 --- minkälaisii elokuvii katot? --- ään . tarkoitin sitä .
+
+
+D transformer suomi24 ID 52359148
+---------------------------------------------------------------
+4 --- formulamenestys ei ollut kaksista tänä vuonna --- ansiossa . olemme mielestäni ratkaistut venäläisiä rakentaessa .
+25 --- Oletko kuunnellut tänään jotain musiikkia? --- ista nyt on taas . madonna jä konstit unelmien deal seitsemäntuhatta .
+72 --- Olisin kuunnellu työmatkalla jos kuulokkeet ei olis hajonnu --- plus ohjelman kaapistossa . tänään tuli kaikki minkä edessä tuosta hern vinkkereihin ja räkä .
+100 --- Terve! <MS> Onko nälkä? --- mme ja pettää liikaa liian kalliilla tyyppiä ? neljä . äkkiä eivätkä pysy kiinni heti kun ois hukassa .
+133 --- Ruuanlaitossa on aika paljon kyse rutiineista --- hakeutuminen . lisää
+141 --- Onko tullut matkusteltua? --- syntyisi millaisina ? hyvin näköjään on syytä huolehtia ?
+229 --- kyllä <MS> mut kui sä et harrasta liikuntaa --- s aina toimit no kaik .koht kahdeksantoista ! ??!! suomipojat
+264 --- mites menee --- ? heh
+266 --- lueks kirjoi vapaa-ajal --- ttömät ilot pääviestinsäs kakkoset läski .tai synny kaikki kuviot ku vaa ni mitte sitten se sais sulle ...
+290 --- minkälaisii elokuvii katot? --- yläkoira ? mulla on mun ku mä jätti mut susta !!
+
+
+
+E Humans ID 1337
+------------------------------------
+4 --- formulamenestys ei ollut kaksista tänä vuonna --- mä en ole sitä itse pahemmin seurannut kuin Hesarin otsikoista
+25 --- Oletko kuunnellut tänään jotain musiikkia? --- hmm en oo tänään kuunnellu mitään <MS> sä?
+72 --- Olisin kuunnellu työmatkalla jos kuulokkeet ei olis hajonnu --- no hitsi <MS> Onko töissä toiset?
+100 --- Terve! <MS> Onko nälkä? --- Tällä hetkellä ei ku just ennen luentoa söin. Sulla?
+133 --- Ruuanlaitossa on aika paljon kyse rutiineista --- Joo.. ja sit on vaikea oppia paremmille tavoille
+141 --- Onko tullut matkusteltua? --- Aika vähän, mut nyt opiskeluvuosina vähän enemmän :slightly_smiling_face: Entä sä?
+229 --- kyllä <MS> mut kui sä et harrasta liikuntaa  --- no ainoo liikuntam mitä teen on koiran lenkitys
+264 --- mites menee --- iha hyvi mites sul
+266 --- lueks kirjoi vapaa-ajal --- emmä oikee <MS> en oo ikin lukenu kokonaist kirjaa
+290 --- minkälaisii elokuvii katot? --- ihan mitä sattuu
