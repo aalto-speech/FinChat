@@ -1,3 +1,5 @@
+__author__ = "Katri Leino and Sami Virpioja"
+__copyright__ = "Copyright (c) 2020, Aalto Speech Research"
 # Python script for human evaluation of recall at 10 metrics.
 
 """ 
