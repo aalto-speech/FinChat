@@ -29,6 +29,7 @@ The filtered set was evaluated by humans guessing the correct answer for each qu
 
 Files:
 - eval_topX_recall_at_10_415.csv : Contains questions and answers.
+- topX_gen_r_at_k.ipynb : Script for creating the csv file with desired parameters.
 - human_evaluation_recall10.py : Script for evaluation. See more details in the beginning of the file.
 - answers*.txt : Evaluation results from each participants. Each participant had different set of questions.
   - Each row has the row number of the question and 1 for correct answer, 0 for incorrect answer.
