@@ -28,6 +28,7 @@ hits@1/10 set is used to automatically evaluate models. The set contains 300 que
 The filtered set was evaluated by humans guessing the correct answer for each question.
 
 Files:
+- topX_gen_r_at_k.ipynb : Notebook to generate eval_topX_recall_at_10_415.csv
 - eval_topX_recall_at_10_415.csv : Contains questions and answers.
 - human_evaluation_recall10.py : Script for evaluation. See more details in the beginning of the file.
 - answers*.txt : Evaluation results from each participants. Each participant had different set of questions.
