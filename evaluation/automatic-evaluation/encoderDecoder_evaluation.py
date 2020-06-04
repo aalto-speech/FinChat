@@ -1,3 +1,7 @@
+__author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
+__copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
+# Contains the functions encoderDecoder_evaluate_script.py uses.
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function

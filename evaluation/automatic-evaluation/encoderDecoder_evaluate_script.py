@@ -1,3 +1,7 @@
+__author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
+__copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
+# Script that downloads the proper model and calculates the automatic metrics for it for given evaluation file.
+
 #!/usr/bin/env python
 # coding: utf-8
 

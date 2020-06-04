@@ -1,3 +1,7 @@
+__author__ = "Juho Leinonen"
+__copyright__ = "Copyright (c) 2020, Aalto Speech Research"
+# Script to create an N-choose-k and hits@1/N evaluation set from a text file.
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
