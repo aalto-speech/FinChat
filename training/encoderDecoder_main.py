@@ -1,3 +1,7 @@
+__author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
+__copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
+# The script that prepares the data and trains the models.
+
 # coding: utf-8
 # 
 # Chatbot Tutorial
