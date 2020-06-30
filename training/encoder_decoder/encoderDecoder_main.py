@@ -1,3 +1,8 @@
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+from __future__ import unicode_literals
+
 __author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
 __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 # The script that prepares the data and trains the models.
@@ -9,10 +14,6 @@ __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 # **Author:** `Matthew Inkawhich <https://github.com/MatthewInkawhich>`_
 # 
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
 
 import torch
 from torch.jit import script, trace
@@ -54,9 +55,9 @@ random.seed(SEED)
 torch.manual_seed(SEED)
 
 # Define path to new file
-inputfile = os.path.join(corpus, source_txt_file)
-datafile = os.path.join(corpus, source_csv_file)
-save_dir = os.path.join("../models", parent_folder_name, args.job_name)
+inputfile = os.path.join(corpus_location, source_txt_file)
+datafile = os.path.join(corpus_location, source_csv_file)
+save_dir = os.path.join("../../models", parent_folder_name, args.job_name)
 
 small_batch_size = 5
 
@@ -71,7 +72,7 @@ checkpoint_iter = 4000
 ######### RUNNING THE SCRIPT ##################
 ###############################################
 
-printLines(os.path.join(corpus, source_txt_file))
+printLines(os.path.join(corpus_location, source_txt_file))
 
 # Load & Preprocess Data
 # ----------------------
@@ -87,7 +88,7 @@ printLines(datafile)
 
 
 # Print some pairs to validate
-voc, pairs = loadPrepareData(corpus, corpus_name, datafile, save_dir)
+voc, pairs = loadPrepareData(corpus_location, corpus_name, datafile, save_dir)
 print("\npairs:")
 for pair in pairs[:10]:
     print(pair)

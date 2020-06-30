@@ -1,11 +1,12 @@
-__author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
-__copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
-# The script that prepares the data.
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
+
+__author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
+__copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
+# The script that prepares the data.
+
 
 import torch
 from torch.jit import script, trace
