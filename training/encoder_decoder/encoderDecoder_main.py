@@ -14,25 +14,11 @@ __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 # **Author:** `Matthew Inkawhich <https://github.com/MatthewInkawhich>`_
 # 
 
-
-import torch
-from torch.jit import script, trace
-import torch.nn as nn
-from torch import optim
-import torch.nn.functional as F
-import csv
-import random
-import re
-import os
-import unicodedata
-import codecs
-from io import open
-import itertools
-import math
 import argparse
+import random
+import torch
 
 from encoderDecoder_prep_data import *
-from encoderDecoder_voc import Voc
 from encoderDecoder_global_variables import *
 from encoderDecoder_models import *
 from encoderDecoder_training import *
@@ -152,8 +138,8 @@ decoder.train()
 
 # Initialize optimizers
 print('Building optimizers ...')
-encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate)
-decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate * decoder_learning_ratio)
+encoder_optimizer = torch.optim.Adam(encoder.parameters(), lr=learning_rate)
+decoder_optimizer = torch.optim.Adam(decoder.parameters(), lr=learning_rate * decoder_learning_ratio)
 if loadFilename:
     encoder_optimizer.load_state_dict(encoder_optimizer_sd)
     decoder_optimizer.load_state_dict(decoder_optimizer_sd)
