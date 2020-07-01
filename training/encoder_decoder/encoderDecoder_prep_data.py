@@ -16,7 +16,8 @@ from io import open
 import itertools
 
 from encoderDecoder_voc import Voc
-from encoderDecoder_global_variables import *
+from encoderDecoder_global_variables import PAD_token, SOS_token, EOS_token
+from encoderDecoder_global_variables import MAX_LENGTH, MIN_COUNT
 
 
 

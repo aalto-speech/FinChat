@@ -18,10 +18,18 @@ import argparse
 import random
 import torch
 
-from encoderDecoder_prep_data import *
-from encoderDecoder_global_variables import *
-from encoderDecoder_models import *
-from encoderDecoder_training import *
+from encoderDecoder_prep_data import printLines
+from encoderDecoder_prep_data import createSentencePairsCSV
+from encoderDecoder_prep_data import loadPrepareData
+from encoderDecoder_prep_data import batch2TrainData
+from encoderDecoder_prep_data import trimRareWords
+
+from encoderDecoder_global_variables import MIN_COUNT, SEED
+
+from encoderDecoder_models import EncoderRNN
+from encoderDecoder_models import LuongAttnDecoderRNN
+from encoderDecoder_training import trainIters
+
 from encoderDecoder_hyperparameters import *
 
 ################################################
@@ -113,7 +121,7 @@ if loadFilename:
 
 print('Building encoder and decoder ...')
 # Initialize word embeddings
-embedding = nn.Embedding(voc.num_words, hidden_size)
+embedding = torch.nn.Embedding(voc.num_words, hidden_size)
 if loadFilename:
     embedding.load_state_dict(embedding_sd)
 # Initialize encoder & decoder models

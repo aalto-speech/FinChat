@@ -7,7 +7,7 @@ __author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInka
 __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 # Contains the class definition of the vocabulary.
 
-from encoderDecoder_global_variables import *
+from encoderDecoder_global_variables import PAD_token, SOS_token, EOS_token
 
 
 class Voc:

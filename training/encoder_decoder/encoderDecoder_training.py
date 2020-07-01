@@ -8,10 +8,12 @@ __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 # Functions that iterate over the training data.
 
 
-from encoderDecoder_prep_data import *
-from encoderDecoder_global_variables import *
+from encoderDecoder_prep_data import batch2TrainData
+from encoderDecoder_global_variables import SOS_token
+from encoderDecoder_global_variables import MAX_LENGTH
+
 import random
-import torch.nn as nn
+import torch
 import os
 
 # Define Training Procedure
@@ -96,8 +98,8 @@ def train(input_variable, lengths, target_variable, mask, max_target_len, encode
     loss.backward()
 
     # Clip gradients: gradients are modified in place
-    _ = nn.utils.clip_grad_norm_(encoder.parameters(), clip)
-    _ = nn.utils.clip_grad_norm_(decoder.parameters(), clip)
+    _ = torch.nn.utils.clip_grad_norm_(encoder.parameters(), clip)
+    _ = torch.nn.utils.clip_grad_norm_(decoder.parameters(), clip)
 
     # Adjust model weights
     encoder_optimizer.step()
