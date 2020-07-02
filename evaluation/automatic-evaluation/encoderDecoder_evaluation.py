@@ -1,27 +1,18 @@
-__author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
-__copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
-# Contains the functions encoderDecoder_evaluate_script.py uses.
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
+__author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
+__copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
+# Contains the functions encoderDecoder_evaluate_script.py uses.
+
+
 import torch
-from torch.jit import script, trace
-import torch.nn as nn
-from torch import optim
-import torch.nn.functional as F
-import csv
 import random
 import re
-import os
-import unicodedata
-import codecs
-from io import open
-import itertools
+import sys
 import operator
-import math
 import numpy as np
 import pandas as pd
 from nltk.translate.bleu_score import corpus_bleu
@@ -29,10 +20,17 @@ from nltk.translate.chrf_score import corpus_chrf
 
 from spacy.lang.fi import Finnish
 
-from encoderDecoder_global_variables import *
-from encoderDecoder_prep_data import *
-from encoderDecoder_training import maskNLLLoss
+sys.path.append('../../training/encoder_decoder')
 
+from encoderDecoder_global_variables import EOS_token
+from encoderDecoder_global_variables import SOS_token
+from encoderDecoder_global_variables import MAX_LENGTH
+
+from encoderDecoder_prep_data import normalizeString
+from encoderDecoder_prep_data import indexesFromSentence
+from encoderDecoder_prep_data import batch2TrainData
+
+from encoderDecoder_training import maskNLLLoss
 
 # Define Evaluation
 # -----------------
@@ -41,7 +39,7 @@ from encoderDecoder_training import maskNLLLoss
 # ~~~~~~~~~~~~~~~
 # 
 
-class GreedySearchDecoder(nn.Module):
+class GreedySearchDecoder(torch.nn.Module):
     def __init__(self, encoder, decoder):
         super(GreedySearchDecoder, self).__init__()
         self.encoder = encoder

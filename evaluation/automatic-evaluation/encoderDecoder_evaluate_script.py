@@ -1,3 +1,8 @@
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+from __future__ import unicode_literals
+
 __author__ = "Original code by Matthew Inkawhich <https://github.com/MatthewInkawhich>, modified by Juho Leinonen"
 __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 # Script that downloads the proper model and calculates the automatic metrics for it for given evaluation file.
@@ -11,34 +16,22 @@ __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 # 
 
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
 
 import torch
-from torch.jit import script, trace
-import torch.nn as nn
-from torch import optim
-import torch.nn.functional as F
-import csv
 import random
-import re
 import os
-import unicodedata
-import codecs
-from io import open
-import itertools
-import math
 import sys
 import argparse
 from shutil import copyfile
 import morfessor
 
+sys.path.append('../../training/encoder_decoder')
+
 from encoderDecoder_voc import Voc
-from encoderDecoder_global_variables import *
-from encoderDecoder_models import *
-from encoderDecoder_evaluation import *
+from encoderDecoder_global_variables import SEED
+from encoderDecoder_models import EncoderRNN
+from encoderDecoder_models import LuongAttnDecoderRNN
+from encoderDecoder_evaluation import calculate_evaluation_metrics
 
 parser = argparse.ArgumentParser(description='Encoder-Decoder script to produce evaluation metrics')
 parser.add_argument('hyperparameters_file', type=str, help='Path to the hyperparameteres file')
@@ -84,7 +77,7 @@ if args.model_tar:
 
 print('Building encoder and decoder ...')
 # Initialize word embeddings
-embedding = nn.Embedding(voc.num_words, hidden_size)
+embedding = torch.nn.Embedding(voc.num_words, hidden_size)
 if args.model_tar:
     embedding.load_state_dict(embedding_sd)
 # Initialize encoder & decoder models
