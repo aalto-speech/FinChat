@@ -17,6 +17,7 @@ __copyright__ = "BSD 3-Clause license, 2017, Pytorch contributors"
 import argparse
 import random
 import torch
+import os
 
 from encoderDecoder_prep_data import printLines
 from encoderDecoder_prep_data import createSentencePairsCSV
@@ -74,7 +75,9 @@ print("\nProcessing corpus...")
 
 # Write new csv file
 print("\nWriting newly formatted file...")
-createSentencePairsCSV(inputfile, datafile)
+inputfile_extension = os.path.splitext(inputfile)[1]
+if "csv" not in inputfile_extension:
+    createSentencePairsCSV(inputfile, datafile)
 
 # Print a sample of lines
 print("\nSample lines from file:")

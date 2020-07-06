@@ -8,7 +8,9 @@ import os
 # Corpus & Data variables 
 corpus_name = "suomi24"
 corpus_location = os.path.join("../../data", corpus_name)
-source_txt_file = "1k_suomi_24_morfs.txt"
+
+# If input file is already a csv file have both of these point to it
+source_txt_file = "1k_suomi_24_morfs.csv"
 source_csv_file = "1k_suomi_24_morfs.csv"
 
 parent_folder_name = "enc-dec_suomi24"
@@ -27,8 +29,8 @@ batch_size = 8
 # Configure training/optimization
 clip = 50.0
 teacher_forcing_ratio = 0.95
-learning_rate = 0.00001
+learning_rate = 0.0001
 decoder_learning_ratio = 5.0
-n_iteration = 560
+n_iteration = 360
 print_every = 10
-save_every = 560
+save_every = 360

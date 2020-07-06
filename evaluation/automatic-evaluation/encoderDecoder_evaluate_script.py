@@ -103,7 +103,7 @@ decoder.eval()
 evaluation_file_extension = os.path.splitext(args.evaluation_file)[1]
 if "csv" in evaluation_file_extension:
     if args.morfessor_model:
-        metrics = calculate_evaluation_metrics(args.evaluation_file, voc, encoder, decoder, embedding, 10, 5, "¤",
+        metrics = calculate_evaluation_metrics(args.evaluation_file, voc, encoder, decoder, embedding, 4, 2, "¤",
                 device, ignore_list, print_for_eval_list, morfessorModel)
     else:
         metrics = calculate_evaluation_metrics(args.evaluation_file, voc, encoder, decoder, embedding, 10, 5, "¤",
