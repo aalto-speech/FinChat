@@ -38,7 +38,7 @@ parser.add_argument('hyperparameters_file', type=str, help='Path to the hyperpar
 parser.add_argument('evaluation_file', type=str, help='Path to the evaluation csv/txt file. '
                                                       'txt file already correct tokens. csv will be tokenized')
 parser.add_argument('model_tar', type=str, help='Path to the tar file of the model')
-parser.add_argument('morfessor_model', type=str, help='The morfessor model')
+parser.add_argument('--morfessor_model', type=str, help='The morfessor model')
 args = parser.parse_args()
 
 USE_CUDA = torch.cuda.is_available()
@@ -47,8 +47,11 @@ device = torch.device("cuda" if USE_CUDA else "cpu")
 random.seed(SEED)
 torch.manual_seed(SEED)
 
-morfessorIO = morfessor.MorfessorIO()
-morfessorModel = morfessorIO.read_binary_model_file(args.morfessor_model)
+if args.morfessor_model:
+    morfessorIO = morfessor.MorfessorIO()
+    morfessorModel = morfessorIO.read_binary_model_file(args.morfessor_model)
+else:
+    MorfessorModel = None
 
 ignore_list = [279, 269, 235, 23, 221, 233, 255, 129, 247, 231, 7, 177, 119, 123, 163, 239, 5, 263, 9, 125, 219, 291, 237, 15, 215, 11, 115, 159, 3, 259, 169, 36, 256, 80, 48, 234, 0, 278, 206, 210, 220, 86, 218, 102, 296, 230, 170, 270, 18, 124, 214, 106, 280, 56, 298, 138, 122, 38, 216, 146, 252, 272, 74, 58, 82, 70, 162, 254, 268, 118, 204, 208, 44, 120]
 
@@ -99,7 +102,7 @@ decoder.eval()
 # Initialize search module
 evaluation_file_extension = os.path.splitext(args.evaluation_file)[1]
 if "csv" in evaluation_file_extension:
-    if "eval_topX_recall" in args.evaluation_file: 
+    if args.morfessor_model:
         metrics = calculate_evaluation_metrics(args.evaluation_file, voc, encoder, decoder, embedding, 10, 5, "¤",
                 device, ignore_list, print_for_eval_list, morfessorModel)
     else:
