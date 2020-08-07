@@ -13,8 +13,8 @@ In addition to FinChat corpus, this repository contains evaluation set, automati
 - **README.md** : Readme-file.
 
 ## Citation
-tba
+K. Leino, J. Leinonen, M. Singh, S. Virpioja and M. Kurimo. "FinChat: Corpus and evaluation setup for Finnish chat conversations on everyday topics." INTERSPEECH. 2020.
 
 ## Contact information
-tba
+See FinChat readme file.
 
