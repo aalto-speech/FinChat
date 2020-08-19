@@ -20,4 +20,4 @@ See FinChat readme file.
 
 
 
-\* This repository's master branch is frozen to the state it was when the paper was sent to review. For a more up to date version check the branch up_to_date.
+\* This repository's master branch is frozen to the state it was when the paper was sent to review. For a more up to date version check the branch up-to-date.
