@@ -2,7 +2,7 @@
 
 FinChat is Finnish conversational chat corpus.
 
-In addition to FinChat corpus, this repository contains evaluation set, automatic evaluation metric scripts and training scripts for open-domain Finnish chatbot.
+In addition to FinChat corpus, this repository\* contains evaluation set, automatic evaluation metric scripts and training scripts for open-domain Finnish chatbot.
 
 ## Structure
 - **evaluation** : Evaluation scripts to evaluate open-domain Finnish conversational models and the results of human evaluation for baseline models.
@@ -18,3 +18,4 @@ K. Leino, J. Leinonen, M. Singh, S. Virpioja and M. Kurimo. "FinChat: Corpus and
 ## Contact information
 See FinChat readme file.
 
+\* This repository's master branch is frozen to the state it was when the paper was sent to review. For a more up to date version check the branch up_to_date.
